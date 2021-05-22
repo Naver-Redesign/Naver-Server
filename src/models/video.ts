@@ -14,6 +14,8 @@ const videoSchema = new mongoose.Schema({
 		type:String,
 		required: true,
 	},
-})
+}, {
+  collection: 'Video'
+});
 
 export default mongoose.model<IVideo & mongoose.Document>("Video", videoSchema);
