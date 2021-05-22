@@ -8,8 +8,8 @@ connectDB();
 // Define Routes
 app.use(express.json());
 
-app.use("/api/videos", require("./api/vidios"));
-
+app.use("/api/videos", require("./api/videos"));
+app.use('/api/main', require('./api/main'));
 
 // error handler
 app.use(function (err, req, res, next) {
