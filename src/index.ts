@@ -2,11 +2,15 @@ import express from "express";
 const app = express();
 import connectDB from "./Logger/db";
 
+import cors from "cors";
+
 // Connect Database
 connectDB();
 
 // Define Routes
 app.use(express.json());
+
+app.use(cors());
 
 app.use("/api/videos", require("./api/videos"));
 app.use('/api/main', require('./api/main'));
